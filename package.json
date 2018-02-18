@@ -1,0 +1,19 @@
+{
+  "name": "postcss-preset-env-codepen",
+  "version": "1.0.0",
+  "scripts": {
+    "browser": "browserify browser.js | babel --presets=env | uglifyjs --compress --mangle > browser.bundle.js; gzip-size browser.bundle.js",
+    "start": "browserify codepen.js | babel --presets=env | uglifyjs --compress --mangle > codepen.bundle.js; gzip-size codepen.bundle.js"
+  },
+  "dependencies": {
+    "postcss": "^6.0.19",
+    "postcss-focus-within": "file:.."
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "browserify": "^16.1.0",
+    "gzip-size-cli": "^2.1.0",
+    "uglify-js": "^3.3.11"
+  },
+  "private": true
+}
